@@ -1,6 +1,7 @@
 # SBA-308A: JavaScript Web Application #
 
 ## Purpose: ##
+This assessment measures my capability to implement advanced JavaScript tools and features in a practical manner by demonstrating my use of asynchronous javascript, API use, and modules.
 
 ### Objectives: ###
 - Use asynchronous JavaScript tools to build a responsive web application.
@@ -13,7 +14,7 @@
 
 
 ## Resource Links: ##
-[API]("google.com")
+[Deck of Cards API]("https://deckofcardsapi.com/")
 
 
 ## Functions: Definitions & Usage ##
