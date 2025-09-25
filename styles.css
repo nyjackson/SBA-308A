@@ -1,0 +1,42 @@
+:root{
+    --main-bg-color:black;
+    --sub-menu-bg-color:black;
+}
+#app {
+  display: flex;
+  width: auto;
+  height: 100%;
+  border: 1px solid black;
+  padding:1%;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-right:5%;
+  padding-right:8%;
+  width: auto;
+}
+#nav-links{
+    text-align:center;
+    margin:auto;
+}
+.nav-link {
+  list-style: none;
+}
+.nav-link:hover {
+  color: #FE654F;
+}
+
+#board{
+    border: 1px black solid;
+}
+.board-side{
+    border: 1px black solid;
+}
+
+#player-interactions{
+    display:flex;
+    justify-content:space-evenly;
+}

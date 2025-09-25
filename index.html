@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBA-308A</title>
-    <!-- Scripts -->
-    <script type = "module" src = "./index.js" defer></script>
-    <script type = "module" src = "./cardAPI.js" defer></script>
-</head>
-<body>
-<div id = "app">
-<nav id = "nav-bar">
-
-</nav>
+    <link href = "styles.css" rel = "stylesheet">
+    <!--External Scripts-->
+    <script src="https://kit.fontawesome.com/e3c642e335.js" crossorigin="anonymous"></script>
+    
+    <!-- Created Scripts -->
+    <script type="module" src="./index.js" defer></script>
+    <script type="module" src="./cardAPI.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav id="nav-bar">
+        <ul id = "nav-links">
+            <li class="nav-link">Collapse</li>
+            <li class="nav-link">Home</li>
+            <li class="nav-link">Game Select</li>
+            <li class="nav-link">New/Continue</li>
+            <li class="nav-link">Settings</li>
+            <li class="nav-link">Quit</li>
+        </ul>
+      </nav>
+      <div id="board">
+        <div class="board-side">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui sint similique impedit voluptatem. Voluptas quod, obcaecati cupiditate id adipisci ad nesciunt sapiente, beatae excepturi odit quasi maxime, provident accusantium deleniti.</div>
+        <div id ="player-interactions"><button>Black Jack</button> <button>Surrender</button></div>
+        <div class="board-side">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, tempore, facere dolor magnam dignissimos ducimus nulla nisi, accusamus reiciendis sint laudantium repellat? Quam tempora impedit odit reiciendis reprehenderit blanditiis nesciunt.
 </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
