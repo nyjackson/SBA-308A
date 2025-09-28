@@ -52,6 +52,10 @@
     display:flex;
     justify-content:space-evenly;
 }
-.action-btn{
-  
+#actions-section{
+  display:flex;
+  justify-content: space-around;
+}
+.action-btn:hover{
+  color:#ff0000;
 }

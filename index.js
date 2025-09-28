@@ -1,16 +1,26 @@
 // All logic for index elements
 import * as deckAPI from "./cardAPI.js";
-const availGames = ["BlackJack", "Cabo"];
+//const availGames = ["BlackJack", "Cabo"];
 const boardSides = document.getElementsByClassName("board-side");
 const actionsDiv = document.getElementById("actions-section")
 
 function loadGame(gameSelected){
     switch(gameSelected){
-        case 'BlackJack':
-            console.log("BlackJack selected.")
-            blackjackStart()
+        case 'blackjack':
+            console.log("BlackJack selected. Loading Game...")
+            //blackjackStart()
+            createActionButtons('blackjack')
+            break;
+        case 'cabo':
+            console.log("Cabo selected. Loading Game...")
+            createActionButtons('cabo')
+            break;
+        default:
+            console.log("Incorrect game selected. Try Again.")
     }
 }
+
+loadGame("blackjack")
 
 function craftCard(card = null, side = "back") {
   // card is an object with code, image, images, value, suit
@@ -24,6 +34,8 @@ function craftCard(card = null, side = "back") {
 
   frontImg.src = cardFrontImg;
   backImg.src = cardBackImg;
+  frontImg.alt = `${card.value} of ${card.suit}`
+  backImg.alt = "Back of a Card";
 
   cardBackDiv.appendChild(backImg);
   cardFrontDiv.appendChild(frontImg);
@@ -35,8 +47,11 @@ function craftCard(card = null, side = "back") {
   return frag;
 }
 
-export function createActionButtons(){
-    for(let i = 0; i < deckAPI.blackjackActions.length;i++){
+function createActionButtons(gameSelected){
+    actionsDiv.innerHTML = ""
+    const selection = gameSelected + "Actions"
+    const actions = deckAPI[selection]
+    for(let i = 0; i < actions.length;i++){
         const btn = document.createElement("button")
         btn.classList.add("action-btn")
         btn.textContent = deckAPI.blackjackActions[i]
@@ -55,7 +70,7 @@ const cardCrafted = craftCard({
   },
   value: "6",
   suit: "HEARTS",
-});
+}, "front");
 const cardCrafted2 = craftCard({
   code: "6H",
   image: "https://deckofcardsapi.com/static/img/6H.png",
@@ -75,7 +90,7 @@ const cardCrafted3 = craftCard({
   },
   value: "6",
   suit: "HEARTS",
-});
+},"front");
 const cardCrafted4 = craftCard({
   code: "6H",
   image: "https://deckofcardsapi.com/static/img/6H.png",

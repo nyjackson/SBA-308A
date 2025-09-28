@@ -1,10 +1,10 @@
-import * as playerUtil from './playerUtil'
+//import * as playerUtil from './playerUtil.js'
 
 export const BASE_API_URL = "https://deckofcardsapi.com/api/deck";
 export let deckId;
 export let drawPileId;
 export const blackjackActions = ["Hit","Stay","Surrender"];
-//export const caboActions = ["Draw From Pile","Draw From Deck","Swap Card","Take Action","Cabo"];
+export const caboActions = ["Draw From Pile","Draw From Deck","Swap Card","Take Action","Cabo"];
 
 export async function getNewDeck() {
   try {
