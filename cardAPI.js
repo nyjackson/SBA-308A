@@ -14,6 +14,8 @@ export async function getNewDeck() {
     );
     const deckInfo = await promiseDeck.json();
     deckId = deckInfo.deck_id;
+    console.log(deckInfo)
+    console.log(deckId)
     return deckInfo || false;
   } catch (e) {
     console.log("Couldn't get a new deck.");
@@ -42,6 +44,6 @@ export async function drawCard(count) {
 //Return cards to the deck
 // https://deckofcardsapi.com/api/deck/<<deck_id>>/return/
 
-export async function reset(){
+export async function resetDeck(){
   await fetch(BASE_API_URL+deckId+"/return/")
 }

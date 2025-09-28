@@ -1,15 +1,17 @@
 // All logic for index elements
 import * as deckAPI from "./cardAPI.js";
+import {Player, ComputerPlayer} from './playerUtil.js'
 //const availGames = ["BlackJack", "Cabo"];
 const boardSides = document.getElementsByClassName("board-side");
 const actionsDiv = document.getElementById("actions-section")
+const startBtn = document.getElementById("start")
 
 function loadGame(gameSelected){
     switch(gameSelected){
         case 'blackjack':
             console.log("BlackJack selected. Loading Game...")
-            //blackjackStart()
             createActionButtons('blackjack')
+            blackjack()
             break;
         case 'cabo':
             console.log("Cabo selected. Loading Game...")
@@ -20,7 +22,17 @@ function loadGame(gameSelected){
     }
 }
 
-loadGame("blackjack")
+startBtn.addEventListener("click", loadGame("blackjack"))
+
+function blackjack(){
+console.log("Starting BlackJack")
+//const name = prompt("What's your name?")
+const player = new Player(name)
+const computer = new ComputerPlayer()
+deckAPI.getNewDeck()
+player.hand = deckAPI.drawCard(2)
+console.log(player.hand)
+}
 
 function craftCard(card = null, side = "back") {
   // card is an object with code, image, images, value, suit
@@ -81,28 +93,6 @@ const cardCrafted2 = craftCard({
   value: "6",
   suit: "HEARTS",
 });
-const cardCrafted3 = craftCard({
-  code: "6H",
-  image: "https://deckofcardsapi.com/static/img/6H.png",
-  images: {
-    svg: "https://deckofcardsapi.com/static/img/6H.svg",
-    png: "https://deckofcardsapi.com/static/img/6H.png",
-  },
-  value: "6",
-  suit: "HEARTS",
-},"front");
-const cardCrafted4 = craftCard({
-  code: "6H",
-  image: "https://deckofcardsapi.com/static/img/6H.png",
-  images: {
-    svg: "https://deckofcardsapi.com/static/img/6H.svg",
-    png: "https://deckofcardsapi.com/static/img/6H.png",
-  },
-  value: "6",
-  suit: "HEARTS",
-});
 
 boardSides[0].appendChild(cardCrafted);
 boardSides[0].appendChild(cardCrafted2);
-boardSides[1].appendChild(cardCrafted3);
-boardSides[1].appendChild(cardCrafted4);
