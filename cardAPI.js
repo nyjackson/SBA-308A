@@ -1,8 +1,10 @@
-const BASE_API_URL = "https://deckofcardsapi.com/api/deck";
-let deckId;
+export const BASE_API_URL = "https://deckofcardsapi.com/api/deck";
+export let deckId;
+export let drawPileId;
 
 export async function getNewDeck() {
   try {
+    // &jokers_enabled=true for jokers in the deck 
     const promiseDeck = await fetch(
       BASE_API_URL + "/new/shuffle/?deck_count=1"
     );
@@ -15,8 +17,6 @@ export async function getNewDeck() {
   }
 }
 
-//getNewDeck()
-
 export async function drawCard(count) {
   try {
     const promiseCard = await fetch(
@@ -28,8 +28,4 @@ export async function drawCard(count) {
     console.log("Unable to draw a card.");
     console.log(e);
   }
-}
-
-export async function getDeck(){
-    
 }

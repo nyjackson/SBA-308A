@@ -8,6 +8,7 @@
   height: 100%;
   border: 1px solid black;
   padding:1%;
+  background-color: #364958;
 }
 
 #nav-bar {
@@ -15,25 +16,30 @@
   flex-direction: column;
   border: 1px solid black;
   margin-right:5%;
-  padding-right:8%;
-  width: auto;
+  width: 18%;
 }
 #nav-links{
     text-align:center;
     margin:auto;
+    padding:10%;
 }
 .nav-link {
   list-style: none;
+  margin-right:20%;
 }
 .nav-link:hover {
-  color: #FE654F;
+  color: #C9E4CA;
 }
 
 #board{
     border: 1px black solid;
+    background-color: #3B6064;
 }
 .board-side{
-    border: 1px black solid;
+    border: 1px rgb(255, 255, 255) solid;
+    padding:1%;
+    display:flex;
+    width:auto;
 }
 
 #player-interactions{
