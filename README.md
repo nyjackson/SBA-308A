@@ -15,7 +15,7 @@ This assessment measures my capability to implement advanced JavaScript tools an
 
 ## Resource Links: ##
 [Deck of Cards API]("https://deckofcardsapi.com/")
-[Coolors]("https://coolors.co/)
+[Coolors]("https://coolors.co/")
 
 ## Functions: Definitions & Usage ##
 
