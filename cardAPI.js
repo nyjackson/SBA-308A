@@ -1,6 +1,10 @@
+import * as playerUtil from './playerUtil'
+
 export const BASE_API_URL = "https://deckofcardsapi.com/api/deck";
 export let deckId;
 export let drawPileId;
+export const blackjackActions = ["Hit","Stay","Surrender"];
+//export const caboActions = ["Draw From Pile","Draw From Deck","Swap Card","Take Action","Cabo"];
 
 export async function getNewDeck() {
   try {
@@ -28,4 +32,16 @@ export async function drawCard(count) {
     console.log("Unable to draw a card.");
     console.log(e);
   }
+}
+
+// Add to Pile
+// https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S
+
+
+
+//Return cards to the deck
+// https://deckofcardsapi.com/api/deck/<<deck_id>>/return/
+
+export async function reset(){
+  await fetch(BASE_API_URL+deckId+"/return/")
 }

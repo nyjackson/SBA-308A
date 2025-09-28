@@ -34,15 +34,24 @@
 #board{
     border: 1px black solid;
     background-color: #3B6064;
+    padding:2%;
 }
+
 .board-side{
     border: 1px rgb(255, 255, 255) solid;
     padding:1%;
     display:flex;
-    width:auto;
+    width:100%;
+}
+.card{
+  flex-direction:row;
+  justify-content: space-evenly;
 }
 
 #player-interactions{
     display:flex;
     justify-content:space-evenly;
+}
+.action-btn{
+  
 }
