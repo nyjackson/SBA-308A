@@ -30,11 +30,12 @@ console.log("Starting BlackJack")
 const player = new Player()
 const computer = new ComputerPlayer()
 const deck = new Deck(await getNewDeck())
- player.hand = deck.drawCard(2)
-// console.log(player.hand)
+const startingCards = await deck.drawCard(2)
+player.addToPile(startingCards) // cardsDrawn.cards
+//console.log(player)
 }
 
-function craftCard(card = null, side = "back") {
+export function craftCard(card = null, side = "back") {
   // card is an object with code, image, images, value, suit
   const frag = document.createDocumentFragment();
   const cardBackImg = "https://deckofcardsapi.com/static/img/back.png";
