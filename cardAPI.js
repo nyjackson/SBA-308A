@@ -27,7 +27,7 @@ export class Deck {
     this.deckId = deckId
   }
   async resetDeck() {
-    await fetch(BASE_API_URL + this.deckId + "/return/");
+    await fetch(BASE_API_URL + "/" + this.deckId + "/return/");
   }
   async drawCard(count) {
     try {

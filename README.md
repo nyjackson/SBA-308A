@@ -3,6 +3,7 @@
 ## Purpose: ##
 This assessment measures my capability to implement advanced JavaScript tools and features in a practical manner by demonstrating my use of asynchronous javascript, API use, and modules.
 
+
 ### Objectives: ###
 - Use asynchronous JavaScript tools to build a responsive web application.
 - Demonstrate understanding of the JavaScript event loop.
@@ -14,8 +15,8 @@ This assessment measures my capability to implement advanced JavaScript tools an
 
 
 ## Resource Links: ##
-[Deck of CardsAPI](https://deckofcardsapi.com/)
-[Coolors](https://coolors.co/)
+- [Deck of CardsAPI](https://deckofcardsapi.com/)
+- [Coolors](https://coolors.co/)
 
 ## Classes: Definitions & Usage ##
 

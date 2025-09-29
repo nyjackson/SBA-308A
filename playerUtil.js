@@ -7,7 +7,6 @@ export class Player {
     this.name = name;
     this.pileId = "player";
     this.pileTotal = 0;
-    this.hand = [];
     this.boardSide = 1;
   }
   // async lookAtCards(){ //incorrect, lists all piles
@@ -22,6 +21,24 @@ export class Player {
       console.log("Bust. Hand total is greater than 21.");
     }
     return this.pileTotal;
+  }
+    async reset(deckId){
+    // https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/return/
+    try{
+       const pileLink =
+      BASE_API_URL +
+      "/" +
+      deckId +
+      "/pile/" +
+      this.pileId +
+      "/return/"
+    await fetch(pileLink);
+    console.log("cards sent back to deck")
+    }
+    catch(e){
+      console.log(e)
+    }
+   
   }
   //
   // Add to Pile
@@ -62,8 +79,16 @@ export class ComputerPlayer extends Player {
     this.pileId = "computer";
     this.boardSide = 0;
   }
-  blackJackLogic() {
+  blackJackLogic(cardToAdd) {
     // if total is at least 17 then stay, if lower then that hit and draw a card
+    console.log("Comp logic here")
+    if(this.pileTotal > 17){
+      return false
+    }
+    else{
+      this.addToPile(cardToAdd)
+      return true
+    }
   }
 }
 
