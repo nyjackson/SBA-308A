@@ -2,7 +2,7 @@
 import { getNewDeck, Deck } from './cardAPI.js';
 import {Player, ComputerPlayer, caboActions, blackjackActions} from './playerUtil.js'
 //const availGames = ["BlackJack", "Cabo"];
-const boardSides = document.getElementsByClassName("board-side");
+export const boardSides = document.getElementsByClassName("board-side");
 const actionsDiv = document.getElementById("actions-section")
 const startBtn = document.getElementById("start")
 
@@ -30,9 +30,10 @@ console.log("Starting BlackJack")
 const player = new Player()
 const computer = new ComputerPlayer()
 const deck = new Deck(await getNewDeck())
-const startingCards = await deck.drawCard(2)
-player.addToPile(startingCards) // cardsDrawn.cards
-//console.log(player)
+const plyrStartingCards = await deck.drawCard(2)
+const compStartingCards = await deck.drawCard(2)
+player.addToPile(plyrStartingCards) // cardsDrawn.cards
+computer.addToPile(compStartingCards)
 }
 
 export function craftCard(card = null, side = "back") {
@@ -74,26 +75,26 @@ function createActionButtons(gameSelected){
 
 //testing
 
-const cardCrafted = craftCard({
-  code: "6H",
-  image: "https://deckofcardsapi.com/static/img/6H.png",
-  images: {
-    svg: "https://deckofcardsapi.com/static/img/6H.svg",
-    png: "https://deckofcardsapi.com/static/img/6H.png",
-  },
-  value: "6",
-  suit: "HEARTS",
-}, "front");
-const cardCrafted2 = craftCard({
-  code: "6H",
-  image: "https://deckofcardsapi.com/static/img/6H.png",
-  images: {
-    svg: "https://deckofcardsapi.com/static/img/6H.svg",
-    png: "https://deckofcardsapi.com/static/img/6H.png",
-  },
-  value: "6",
-  suit: "HEARTS",
-});
+// const cardCrafted = craftCard({
+//   code: "6H",
+//   image: "https://deckofcardsapi.com/static/img/6H.png",
+//   images: {
+//     svg: "https://deckofcardsapi.com/static/img/6H.svg",
+//     png: "https://deckofcardsapi.com/static/img/6H.png",
+//   },
+//   value: "6",
+//   suit: "HEARTS",
+// }, "front");
+// const cardCrafted2 = craftCard({
+//   code: "6H",
+//   image: "https://deckofcardsapi.com/static/img/6H.png",
+//   images: {
+//     svg: "https://deckofcardsapi.com/static/img/6H.svg",
+//     png: "https://deckofcardsapi.com/static/img/6H.png",
+//   },
+//   value: "6",
+//   suit: "HEARTS",
+// });
 
-boardSides[0].appendChild(cardCrafted);
-boardSides[0].appendChild(cardCrafted2);
+// boardSides[0].appendChild(cardCrafted);
+// boardSides[0].appendChild(cardCrafted2);
