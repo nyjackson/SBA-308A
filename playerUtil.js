@@ -42,7 +42,7 @@ export class Player {
       const card = cards[i];
       cardsToAdd += card.code;
 
-      this.pileTotal += getCardValue(card.value);
+      this.pileTotal += getCardValue(card.value, this.pileTotal);
 
       let side = "";
       this.boardSide == 1 ? (side = "front") : (side = "back");
@@ -74,7 +74,7 @@ export class ComputerPlayer extends Player {
   }
 }
 
-function getCardValue(value) {
+function getCardValue(value, total) {
   switch (value.trim()) {
     case "QUEEN":
       return 10;
@@ -82,6 +82,8 @@ function getCardValue(value) {
       return 10;
     case "JACK":
       return 10;
+    case 'ACE':
+        return total+11 > 21 ? 1 : 11 //need to test
     default:
       return parseInt(value);
   }

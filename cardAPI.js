@@ -22,6 +22,7 @@ export let drawPileId;
       console.log(e);
     }
   }
+
 export class Deck {
   constructor(deckId) {
     this.deckId = deckId
@@ -41,8 +42,4 @@ export class Deck {
       console.log(e);
     }
   }
-  async addToPile(){
-    // https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S
-  }
-
 }
