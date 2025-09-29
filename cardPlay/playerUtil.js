@@ -90,6 +90,11 @@ export class ComputerPlayer extends Player {
       return true
     }
   }
+  showCards(){
+    for(let i = 0; i < boardSides.length;i++){
+      boardSides[i]
+    }
+  }
 }
 
 function getCardValue(value, total) {

@@ -87,7 +87,7 @@ function endCondition(winner){
     const messageBox = document.getElementById("msg-box")
     const p = document.createElement("p")
     const btn = document.createElement("button")
-    p.textContent = winMessage
+    p.textContent = winMessage 
     btn.textContent = "Play Again?"
     btn.addEventListener("click", () => {
         clearBoard()
