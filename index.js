@@ -1,6 +1,6 @@
 // All logic for index elements
-import * as deckAPI from "./cardAPI.js";
-import {Player, ComputerPlayer} from './playerUtil.js'
+import { getNewDeck, Deck } from './cardAPI.js';
+import {Player, ComputerPlayer, caboActions, blackjackActions} from './playerUtil.js'
 //const availGames = ["BlackJack", "Cabo"];
 const boardSides = document.getElementsByClassName("board-side");
 const actionsDiv = document.getElementById("actions-section")
@@ -24,14 +24,14 @@ function loadGame(gameSelected){
 
 startBtn.addEventListener("click", loadGame("blackjack"))
 
-function blackjack(){
+async function blackjack(){
 console.log("Starting BlackJack")
 //const name = prompt("What's your name?")
-const player = new Player(name)
+const player = new Player()
 const computer = new ComputerPlayer()
-deckAPI.getNewDeck()
-player.hand = deckAPI.drawCard(2)
-console.log(player.hand)
+const deck = new Deck(await getNewDeck())
+ player.hand = deck.drawCard(2)
+// console.log(player.hand)
 }
 
 function craftCard(card = null, side = "back") {
@@ -61,12 +61,12 @@ function craftCard(card = null, side = "back") {
 
 function createActionButtons(gameSelected){
     actionsDiv.innerHTML = ""
-    const selection = gameSelected + "Actions"
-    const actions = deckAPI[selection]
-    for(let i = 0; i < actions.length;i++){
+    //const selection = gameSelected + "Actions"
+    console.log(gameSelected)
+    for(let i = 0; i < blackjackActions.length;i++){
         const btn = document.createElement("button")
         btn.classList.add("action-btn")
-        btn.textContent = deckAPI.blackjackActions[i]
+        btn.textContent = blackjackActions[i]
         actionsDiv.appendChild(btn)
     }
 }
