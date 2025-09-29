@@ -1,7 +1,6 @@
 //import * as playerUtil from './playerUtil.js'
 
 export const BASE_API_URL = "https://deckofcardsapi.com/api/deck";
-export let drawPileId;
 
 // Add to Pile
 // https://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/add/?cards=AS,2S

@@ -1,6 +1,6 @@
 // All logic for index elements
 import { getNewDeck, Deck } from './cardAPI.js';
-import {Player, ComputerPlayer, caboActions, blackjackActions} from './playerUtil.js'
+import {Player, ComputerPlayer, blackjackActions} from './playerUtil.js'
 //const availGames = ["BlackJack", "Cabo"];
 export const boardSides = document.getElementsByClassName("board-side");
 const actionsDiv = document.getElementById("actions-section")
@@ -11,7 +11,7 @@ function loadGame(gameSelected){
         case 'blackjack':
             console.log("BlackJack selected. Loading Game...")
             createActionButtons('blackjack')
-            blackjack()
+            blackjackStart()
             break;
         case 'cabo':
             console.log("Cabo selected. Loading Game...")
@@ -24,7 +24,7 @@ function loadGame(gameSelected){
 
 startBtn.addEventListener("click", loadGame("blackjack"))
 
-async function blackjack(){
+async function blackjackStart(){
 console.log("Starting BlackJack")
 //const name = prompt("What's your name?")
 const player = new Player()
@@ -72,29 +72,3 @@ function createActionButtons(gameSelected){
         actionsDiv.appendChild(btn)
     }
 }
-
-//testing
-
-// const cardCrafted = craftCard({
-//   code: "6H",
-//   image: "https://deckofcardsapi.com/static/img/6H.png",
-//   images: {
-//     svg: "https://deckofcardsapi.com/static/img/6H.svg",
-//     png: "https://deckofcardsapi.com/static/img/6H.png",
-//   },
-//   value: "6",
-//   suit: "HEARTS",
-// }, "front");
-// const cardCrafted2 = craftCard({
-//   code: "6H",
-//   image: "https://deckofcardsapi.com/static/img/6H.png",
-//   images: {
-//     svg: "https://deckofcardsapi.com/static/img/6H.svg",
-//     png: "https://deckofcardsapi.com/static/img/6H.png",
-//   },
-//   value: "6",
-//   suit: "HEARTS",
-// });
-
-// boardSides[0].appendChild(cardCrafted);
-// boardSides[0].appendChild(cardCrafted2);

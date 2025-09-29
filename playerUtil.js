@@ -1,13 +1,6 @@
 import { BASE_API_URL } from "./cardAPI.js";
 import { craftCard, boardSides } from "./index.js";
 export const blackjackActions = ["Hit", "Stay", "Surrender"];
-export const caboActions = [
-  "Draw From Pile",
-  "Draw From Deck",
-  "Swap Card",
-  "Take Action",
-  "Cabo",
-];
 
 export class Player {
   constructor(name = "player") {
