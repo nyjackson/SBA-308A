@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBA 308A</title>
+    <link rel = "stylesheet" href = "./styles.css">
+    <script type = "module" src = "./scripts/index.js" defer></script>
+    <script type = "module" src = "./scripts/gameAPI.js" defer></script>
+    <script src="https://kit.fontawesome.com/e3c642e335.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div id ="nav">
+        <ul>
+            <li>Home</li>
+            <li>Liked Games</li>
+        </ul>
+        <form>
+            <label for = "game-search">Search</label>
+            <input type = "search" id = "game-search" name = "query" placeholder = "Enter a game genre!"/>
+            <i class="fa-regular fa-paper-plane" id = "submit"></i>
+        </form>
+    </div>
+    <div id = "game-library"></div>
 </body>
 </html>
