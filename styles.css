@@ -105,3 +105,16 @@ max-height:400px;
     font-weight: 900;
     font-size:x-large;
 }
+sub{
+    font-size:medium;
+}
+
+a{
+    color:#87BBA2;
+    text-decoration: dotted;
+}
+a:hover {
+    
+    color:#55828B;
+    text-decoration: underline;
+}

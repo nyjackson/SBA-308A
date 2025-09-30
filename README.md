@@ -1,7 +1,7 @@
 # SBA-308A: JavaScript Web Application #
 Tarotific - A Tarot Card Dictionary Application
 
-All card names, descriptions, and divinatory meanings from TarotAPI and the images attained from Krates98's TarotCard API repo are according to AE Waite's Pictorial Key to the Tarot (1910), the companion to the Rider-Waite-Smith (RWS) deck in which most newer decks are based upon.
+All card names, descriptions, and divinatory meanings from TarotAPI and the images attained from Krates98's TarotCard API repo are according to AE Waite's "Pictorial Key to the Tarot" (1910), the companion to the Rider-Waite-Smith (RWS) deck in which most newer decks are based upon.
 
 ## Purpose: ##
 This assessment measures my capability to implement advanced JavaScript tools and features in a practical manner by demonstrating my use of asynchronous javascript, API use, and modules.
@@ -22,6 +22,7 @@ This assessment measures my capability to implement advanced JavaScript tools an
 - [Tarot API](https://tarotapi.dev/)
 - [Coolors](https://coolors.co/c9e4ca-87bba2-55828b-3b6064-364958)
 - [Tarot Images](https://github.com/krates98/tarotcardapi/tree/main/images)
+- [Google Fonts](https://fonts.google.com/share?selection.family=Alumni+Sans+Pinstripe:ital@0;1|Eagle+Lake)
 
 ## Scripts & Functions: Definitions & Usage ##
 

@@ -1,7 +1,10 @@
 import {loadAllCards, randomCard, searchFor} from './tarotAPI.js'
 import {craftAbout} from "./uiHelpers.js"
+
 const navMenuLinks = document.getElementById("nav-menu-links")
 const searchBtn = document.getElementById("submit")
+
+
 export const searchQ = document.getElementById("card-search")
 export const cardGallery = document.getElementById("card-gallery")
 export const about = document.getElementById("about")

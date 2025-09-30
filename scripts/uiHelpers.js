@@ -69,13 +69,14 @@ export function craftAbout(){
  const aboutDiv = document.createElement("div")
  const h1 = document.createElement("h1")
  const p = document.createElement("p")
- const ul = document.createElement("ul")
+ const sub = document.createElement("sub")
  h1.textContent = "Welcome to Tarotific!"
  p.textContent = "Tarotific is a site to explore the meanings of tarot cards! Select a link from the nav bar or enter a search term to get started."
- ul.textContent = "Sources:"
+ sub.innerHTML = "Information from <a href = 'https://tarotapi.dev/'>Tarot API</a> and Images from <a href = 'https://github.com/krates98/tarotcardapi/'>Krates98</a>"
 // const li = document.createElement("li")
  aboutDiv.appendChild(h1)
  aboutDiv.appendChild(p)
+ aboutDiv.appendChild(sub)
  aboutDiv.id = "about"
 frag.appendChild(aboutDiv)
 uploadCard(frag)

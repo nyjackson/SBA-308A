@@ -1,5 +1,6 @@
 import {createTarotCard, clearCards} from "./uiHelpers.js"
 import { searchQ } from "./index.js"
+
 export const BASE_API_URL = "https://tarotapi.dev/api/v1/cards/"
 
 export async function loadAllCards(){
@@ -28,7 +29,6 @@ export async function loadSpecificCards(cardsArr){
 }
 
 export async function searchFor(e){
-// search for specific logic, change current logic as it searches all uses of the word(s)
 e.preventDefault()
 clearCards()
 const query = searchQ.value.trim().toLowerCase()
