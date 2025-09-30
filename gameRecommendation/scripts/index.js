@@ -1,9 +1,9 @@
 import {searchForGames} from "./gameAPI.js"
 const navBar = document.getElementById("nav")
-export const searchBar = document.getElementById("game-search")
-export const gameLib = document.getElementById("game-library")
+export const searchBar = document.getElementById("card-search")
+export const cardLib = document.getElementById("card-library")
 export const body = document.body
-const searchBtn = document.getElementById("submit")
+export const searchBtn = document.getElementById("submit")
 
 
 

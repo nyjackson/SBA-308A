@@ -39,7 +39,7 @@ function createGameCard(game){
     return div
 }
 
-function showError(message){
+export function showError(message){
     const frag = document.createDocumentFragment()
     const div = document.createElement("div")
     const p = document.createElement("p")

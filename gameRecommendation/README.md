@@ -17,7 +17,7 @@ This assessment measures my capability to implement advanced JavaScript tools an
 
 ## Resource Links: ##
 - [GameBrain API](https://gamebrain.co/)
-- [Coolors](https://coolors.co/)
+- [Coolors](https://coolors.co/c9e4ca-87bba2-55828b-3b6064-364958)
 
 ## Scripts & Functions: Definitions & Usage ##
 
