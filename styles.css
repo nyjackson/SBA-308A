@@ -65,20 +65,23 @@ form > label {
     width:auto;
     height:auto; /** change to % val*/
     background-color: #3B6064;
-    border:1px solid black;
     display:flex;
     flex-wrap:wrap;
+    color:#87BBA2;
 }
 
 .tarot-card{
-    border:1px solid rgb(255, 255, 255);
+    border-bottom:1px solid rgb(255, 255, 255);
     display:flex;
     padding:1%;
     height:auto; /** alter for responsiveness*/
+    font-family: "Eagle Lake", serif;
 }
 .tarot-card > h1{
     margin-left:1%;
     font-size:16px;
+    
+    
 }
 .tarot-card > img{
 object-fit: contain;

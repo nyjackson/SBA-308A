@@ -1,4 +1,4 @@
-import {loadAllCards,loadSpecificCards, randomCard, searchFor} from './tarotAPI.js'
+import {loadAllCards, randomCard, searchFor} from './tarotAPI.js'
 const navMenuLinks = document.getElementById("nav-menu-links")
 const searchBtn = document.getElementById("submit")
 export const searchQ = document.getElementById("card-search")
@@ -17,6 +17,7 @@ async function navInteraction(e){
             break;
         default:
             console.log("hit default")
+            
             break;
     }
 }

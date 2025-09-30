@@ -7,6 +7,7 @@ const frag = document.createDocumentFragment()
 const cardDiv = document.createElement("div")
 cardDiv.classList.add("tarot-card")
 //console.log(card.name)
+if(card.name == "The Last Judgment"){card.name = "Judgement"}
 const tarotImg = getImage(card.name)
 const tarotDesc = getTarotInfo(card)
 cardDiv.appendChild(tarotImg)
@@ -14,10 +15,6 @@ cardDiv.appendChild(tarotDesc)
 frag.appendChild(cardDiv)
 
 uploadCard(frag)
-}
-
-export function createTarotGallery(cards){
-// recieves an array of card objects 
 }
 
 function uploadCard(cardFrag){
@@ -43,7 +40,6 @@ function getImage(name){
         }
     return img
 }
-
 function getTarotInfo(card){
     const frag = document.createDocumentFragment()
     const div = document.createElement("div")
@@ -64,5 +60,19 @@ function getTarotInfo(card){
     div.classList.add("tarot-info")
     frag.appendChild(div)
     return frag
+
+}
+
+function craftAbout(){
+ const frag = document.createDocumentFragment()
+ const aboutDiv = document.createElement("div")
+ const h1 = document.createElement("h1")
+ const p = document.createElement("p")
+ h1.textContent = "Tarot "
+
+ aboutDiv.appendChild("h1")
+ aboutDiv.appendChild("p")
+ return frag
+
 
 }
