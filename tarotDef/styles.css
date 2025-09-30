@@ -62,8 +62,8 @@ form > label {
 }
 
 #card-gallery{
-    width:100%;
-    height:200px; /** change to % val*/
+    width:auto;
+    height:auto; /** change to % val*/
     background-color: #3B6064;
     border:1px solid black;
     display:flex;
@@ -71,10 +71,27 @@ form > label {
 }
 
 .tarot-card{
-    border:1px solid black;
-    height:100%;
-    /* width:30%; auto? */
+    border:1px solid rgb(255, 255, 255);
+    display:flex;
+    padding:1%;
+    height:auto; /** alter for responsiveness*/
+}
+.tarot-card > h1{
+    margin-left:1%;
+    font-size:16px;
+}
+.tarot-card > img{
+object-fit: contain;
+display:block;
+max-width:300px;
+max-height:400px;
 }
 #meaning{
     text-decoration: underline;
+}
+
+.tarot-info{
+    display:flex;
+    flex-direction: column;
+    margin-left:3%;
 }
