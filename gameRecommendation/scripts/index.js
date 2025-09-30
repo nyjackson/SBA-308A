@@ -2,6 +2,7 @@ import {searchForGames} from "./gameAPI.js"
 const navBar = document.getElementById("nav")
 export const searchBar = document.getElementById("game-search")
 export const gameLib = document.getElementById("game-library")
+export const body = document.body
 const searchBtn = document.getElementById("submit")
 
 
@@ -23,7 +24,13 @@ export function showGames(games){
     const title = document.createElement("h3")
     const img = document.createElement("img")
     div.classList.add("game")
-    img.src = game.image
+    //
+    if(game.image == null && game.screenshots !== null){
+        img.src = game.screenshots[0]
+    }
+    else{
+     img.src = game.image
+    }
     title.textContent = game.name
     div.appendChild(img)
     div.appendChild(title)
