@@ -38,3 +38,13 @@ function createGameCard(game){
     div.appendChild(title)
     return div
 }
+
+function showError(message){
+    const frag = document.createDocumentFragment()
+    const div = document.createElement("div")
+    const p = document.createElement("p")
+    p.textContent = message
+    div.appendChild(p)
+    frag.append(div)
+    return frag
+}

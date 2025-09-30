@@ -19,7 +19,7 @@ color:blue;
 }
 
 #nav > form{
-    margin-right:10%;
+    display:flex;
 }
 #game-library{
      border:1px solid black;

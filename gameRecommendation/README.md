@@ -22,7 +22,10 @@ This assessment measures my capability to implement advanced JavaScript tools an
 ## Scripts & Functions: Definitions & Usage ##
 
 ### index.js ###
+This JS file contains nav bar interaction and the html element event listener methods needed for functionality.
 
 ### gameAPI.js ###
+This JS file contains script interaction using the GameBrain API.
 
 ### uiHelpers.js ###
+Contains html element creation functions. 
