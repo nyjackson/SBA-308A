@@ -8,6 +8,7 @@
     justify-content:space-between;
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 800;
+    font-size:large;
     background-color:#364958;
     color:#C9E4CA;
 }
@@ -97,4 +98,10 @@ max-height:400px;
     display:flex;
     flex-direction: column;
     margin-left:3%;
+}
+#about{
+    padding:1%;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 900;
+    font-size:x-large;
 }

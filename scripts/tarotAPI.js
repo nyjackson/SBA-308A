@@ -4,15 +4,23 @@ export const BASE_API_URL = "https://tarotapi.dev/api/v1/cards/"
 
 export async function loadAllCards(){
     // will load all cards
+    clearCards()
+    try{
     const allCards = await fetch(BASE_API_URL)
     const cardsJson = await allCards.json()
     console.log(cardsJson)
     const cardsArr = cardsJson.cards
     loadSpecificCards(cardsArr)
+    }
+    catch(e){
+        console.log(e)
+        alert("Couldn't load all cards. Try Again.")
+    }
+    
 }
 
 export async function loadSpecificCards(cardsArr){
-        for(let i =0; i < cardsArr.length;i++){
+        for(let i = 0; i < cardsArr.length;i++){
             const card = cardsArr[i]
             console.log(card)
             createTarotCard(card)
@@ -46,7 +54,6 @@ catch(e){
     console.log(e)
     alert("Unable to search. Try another term!")
 }
-
 }
 
 export async function randomCard(){

@@ -1,4 +1,4 @@
-import {cardGallery} from './index.js'
+import {about, cardGallery} from './index.js'
 
 export function createTarotCard(card){
 // recieves the card object. 
@@ -63,16 +63,21 @@ function getTarotInfo(card){
 
 }
 
-function craftAbout(){
+export function craftAbout(){
+ clearCards()
  const frag = document.createDocumentFragment()
  const aboutDiv = document.createElement("div")
  const h1 = document.createElement("h1")
  const p = document.createElement("p")
- h1.textContent = "Tarot "
-
- aboutDiv.appendChild("h1")
- aboutDiv.appendChild("p")
- return frag
-
-
+ const ul = document.createElement("ul")
+ h1.textContent = "Welcome to Tarotific!"
+ p.textContent = "Tarotific is a site to explore the meanings of tarot cards! Select a link from the nav bar or enter a search term to get started."
+ ul.textContent = "Sources:"
+// const li = document.createElement("li")
+ aboutDiv.appendChild(h1)
+ aboutDiv.appendChild(p)
+ aboutDiv.id = "about"
+frag.appendChild(aboutDiv)
+uploadCard(frag)
 }
+
