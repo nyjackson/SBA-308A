@@ -9,6 +9,7 @@ export async function loadAllCards(){
     try{
     const allCards = await fetch(BASE_API_URL)
     const cardsJson = await allCards.json()
+    document.body.style.cursor  = "wait"
     console.log(cardsJson)
     const cardsArr = cardsJson.cards
     loadSpecificCards(cardsArr)
@@ -21,6 +22,7 @@ export async function loadAllCards(){
 }
 
 export async function loadSpecificCards(cardsArr){
+     document.body.style.cursor  = "wait"
         for(let i = 0; i < cardsArr.length;i++){
             const card = cardsArr[i]
             console.log(card)

@@ -1,11 +1,10 @@
 # SBA-308A: JavaScript Web Application #
-Tarotific - A Tarot Card Dictionary Application
+Tarotific - A Tarot Card Information Application
 
 All card names, descriptions, and divinatory meanings from TarotAPI and the images attained from Krates98's TarotCard API repo are according to AE Waite's "Pictorial Key to the Tarot" (1910), the companion to the Rider-Waite-Smith (RWS) deck in which most newer decks are based upon.
 
 ## Purpose: ##
 This assessment measures my capability to implement advanced JavaScript tools and features in a practical manner by demonstrating my use of asynchronous javascript, API use, and modules.
-
 
 ### Objectives: ###
 - Use asynchronous JavaScript tools to build a responsive web application.
@@ -16,7 +15,7 @@ This assessment measures my capability to implement advanced JavaScript tools an
 
 ## Installation/Access: ##
 1. Clone GitHub Repo
-2. Open index.html in browser via Live Server
+2. Open index.html in browser or open via Live Server
 
 ## Resource Links: ##
 - [Tarot API](https://tarotapi.dev/)
@@ -29,8 +28,23 @@ This assessment measures my capability to implement advanced JavaScript tools an
 ### index.js ###
 This JS file contains nav bar interaction and the html element event listener methods needed for functionality.
 
+- navInteraction: starts the right process given the selected text in the nav bar.
+- initialLoad: loads About Page on first load
+
 ### tarotAPI.js ###
-This JS file contains script interaction using the Tarot API.
+This JS file contains async/await and fetch Promise interaction using the Tarot API. 
+
+- loadAllCards: gets all available cards and inserts them into the gallery.
+- loadSpecificCards: gets cards with the searched keyword(s) included
+- randomCard: gets a random card
+- searchFor: looks for the corresponding card using the keyword from the search bar
 
 ### uiHelpers.js ###
 Contains html element creation functions. 
+
+- createTarotCard: creates a the tarot card to display
+- uploadCard: adds the card to the gallery
+- clearCards: clears all cards from the gallery
+- getImage: creates the cards corresponding image located in "./images"
+- getTarotInfo: creates the corresponding tarot card's information
+- craftAbout: creates the about section
