@@ -111,7 +111,7 @@ sub{
 
 a{
     color:#87BBA2;
-    text-decoration: dotted;
+    text-decoration: none;
 }
 a:hover {
     

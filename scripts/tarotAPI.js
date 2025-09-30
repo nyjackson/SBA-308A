@@ -8,7 +8,11 @@ export async function loadAllCards(){
     clearCards()
     try{
     const allCards = await fetch(BASE_API_URL)
+    if (!allCards.ok) {
+    throw new Error(`HTTP Error Status: ${cardLink.status}`)
+}
     const cardsJson = await allCards.json()
+    
     document.body.style.cursor  = "wait"
     console.log(cardsJson)
     const cardsArr = cardsJson.cards
@@ -43,6 +47,9 @@ const queryCheck = query.replace("judgement", "judgment")
 
 try{
 const cardLink = await fetch(BASE_API_URL + "search/?q=" + queryCheck)
+if (!cardLink.ok) {
+    throw new Error(`HTTP Error Status: ${cardLink.status}`)
+}
 const cardJson = await cardLink.json()
 console.log(cardJson)
 if(cardJson.cards.length < 2){
@@ -62,6 +69,9 @@ export async function randomCard(){
     clearCards()
     try{
     const randCardLink = await fetch(BASE_API_URL +"random?n=1")
+    if (!randCardLink.ok) {
+    throw new Error(`HTTP Error Status: ${cardLink.status}`)
+}
     const jsonResp = await randCardLink.json()
     createTarotCard(jsonResp.cards[0])
     }
