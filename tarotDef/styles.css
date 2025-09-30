@@ -44,7 +44,7 @@ form > input[type = search]{
     border-radius:30px;
     margin-right:1%; 
     font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-weight: larger;
+    font-weight: 900;
     width:40%;
 }
 form > label {
@@ -53,7 +53,10 @@ form > label {
 
 #submit{
     border-radius:30px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 900;
 }
+
 #submit:hover{
     cursor: pointer;
 }
