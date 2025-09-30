@@ -15,33 +15,3 @@ console.log(target)
 navBar.addEventListener("click", menuLinkInteraction)
 searchBtn.addEventListener("click", searchForGames)
 
-export function showGames(games){
-    const frag = document.createDocumentFragment()
-    for(let i = 0; i < games.length; i ++){
-    const game = games[i]
-    console.log(game)
-    const div = document.createElement("div")
-    const title = document.createElement("h3")
-    const img = document.createElement("img")
-    div.classList.add("game")
-    //
-    if(game.image == null && game.screenshots !== null){
-        img.src = game.screenshots[0]
-    }
-    else{
-     img.src = game.image
-    }
-    title.textContent = game.name
-    div.appendChild(img)
-    div.appendChild(title)
-    frag.appendChild(div)
-    }
-    gameLib.appendChild(frag)
-    
-}
-
-export function clearGames(){
-    while(gameLib.firstChild){
-        gameLib.removeChild(gameLib.firstChild)
-    }
-}

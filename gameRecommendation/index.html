@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href = "./styles.css">
     <script type = "module" src = "./scripts/index.js" defer></script>
     <script type = "module" src = "./scripts/gameAPI.js" defer></script>
+    <script type = "module" src = "./scripts/uiHelpers.js" defer></script>
     <script src="https://kit.fontawesome.com/e3c642e335.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,9 +19,19 @@
         <form>
             <label for = "game-search">Search</label>
             <input type = "search" id = "game-search" name = "query" placeholder = "Enter a game genre!"/>
-            <i class="fa-regular fa-paper-plane" id = "submit"></i>
+            <button id = "submit">Submit</button>
         </form>
     </div>
+    <div id = "filters"></div>
     <div id = "game-library"></div>
+    <div id = "page-load">
+    <!-- <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul> -->
+    </div>
 </body>
 </html>

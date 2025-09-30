@@ -1,5 +1,5 @@
 # SBA-308A: JavaScript Web Application #
-
+Game Search + Discovery Application
 ## Purpose: ##
 This assessment measures my capability to implement advanced JavaScript tools and features in a practical manner by demonstrating my use of asynchronous javascript, API use, and modules.
 
@@ -12,13 +12,17 @@ This assessment measures my capability to implement advanced JavaScript tools an
 - Organize files using modules and imports.
 
 ## Installation/Access: ##
-
+1. Clone GitHub Repo
+2. Open index.html in browser
 
 ## Resource Links: ##
-- [Deck of CardsAPI](https://deckofcardsapi.com/)
+- [GameBrain API](https://gamebrain.co/)
 - [Coolors](https://coolors.co/)
 
-## Classes: Definitions & Usage ##
+## Scripts & Functions: Definitions & Usage ##
 
-## Functions: Definitions & Usage ##
+### index.js ###
 
+### gameAPI.js ###
+
+### uiHelpers.js ###

@@ -1,17 +1,8 @@
 // cac9746b0af44734a45fc0117060dc26
 export const API_KEY = "cac9746b0af44734a45fc0117060dc26"
 export const BASE_API_URL = "https://api.gamebrain.co/v1/games"
-import {searchBar, showGames, clearGames, body} from './index.js'
-
-// async function initialLoad(){
-//     const link = await fetch(BASE_API_URL, {
-//         method: "GET",
-//         headers:{
-//             "x-api-key":API_KEY
-//         }
-//     });
-
-// }
+import { showGames, clearGames} from './uiHelpers.js'
+import {searchBar, body} from './index.js'
 
 export async function searchForGames(e){
     e.preventDefault()
