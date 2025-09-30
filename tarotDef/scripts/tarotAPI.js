@@ -1,9 +1,9 @@
 import {createTarotCard, clearCards, createTarotGallery} from "./uiHelpers.js"
+import { searchQ } from "./index.js"
 export const BASE_API_URL = "https://tarotapi.dev/api/v1/cards/"
 
 export async function loadAllCards(){
     // will load all cards
-    //e.preventDefault()
     const allCards = await fetch(BASE_API_URL)
     const cardsJson = await allCards.json()
     console.log(cardsJson)
@@ -22,17 +22,28 @@ export async function searchFor(e){
 // search for specific logic, change current logic as it searches all uses of the word(s)
 e.preventDefault()
 clearCards()
-const value = e.target.value
-console.log(value)
-const cardLink = await fetch(BASE_API_URL + "search/?q=" + value)
+const query = searchQ.value.trim()
+console.log(query)
+if(query == ""){
+    alert("Please enter a keyword to search for.")
+    return
+}
+try{
+const cardLink = await fetch(BASE_API_URL + "search/?q=" + query)
 const cardJson = await cardLink.json()
 console.log(cardJson)
-if(cardJson.length > 1){
+if(cardJson.cards.length < 2){
     createTarotCard(cardJson.cards[0])
 }
 else{
     loadSpecificCards(cardJson.cards)
 }
+}
+catch(e){
+    console.log(e)
+    alert("Unable to search. Try another term!")
+}
+
 }
 
 export async function randomCard(){

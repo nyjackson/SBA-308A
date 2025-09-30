@@ -1,6 +1,7 @@
 import {loadAllCards,loadSpecificCards, randomCard, searchFor} from './tarotAPI.js'
 const navMenuLinks = document.getElementById("nav-menu-links")
 const searchBtn = document.getElementById("submit")
+export const searchQ = document.getElementById("card-search")
 export const cardGallery = document.getElementById("card-gallery")
 
 async function navInteraction(e){
