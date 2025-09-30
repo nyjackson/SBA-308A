@@ -9,7 +9,7 @@ export async function loadAllCards(){
     try{
     const allCards = await fetch(BASE_API_URL)
     if (!allCards.ok) {
-    throw new Error(`HTTP Error Status: ${cardLink.status}`)
+    throw new Error(`HTTP Error Status: ${allCards.status}`)
 }
     const cardsJson = await allCards.json()
     
@@ -70,7 +70,7 @@ export async function randomCard(){
     try{
     const randCardLink = await fetch(BASE_API_URL +"random?n=1")
     if (!randCardLink.ok) {
-    throw new Error(`HTTP Error Status: ${cardLink.status}`)
+    throw new Error(`HTTP Error Status: ${randCardLink.status}`)
 }
     const jsonResp = await randCardLink.json()
     createTarotCard(jsonResp.cards[0])
