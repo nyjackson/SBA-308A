@@ -3,26 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SBA 308A</title>
+    <title>Tarotific - SBA 308A</title>
+
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./scripts/index.js" defer></script>
     <script type="module" src="./scripts/tarotAPI.js" defer></script>
     <script type="module" src="./scripts/uiHelpers.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/e3c642e335.js"
-      crossorigin="anonymous"
-    ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Eagle+Lake&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="nav">
-        <h2 id = "logo-name">Tarotific</h2>
-      <ul id = "nav-menu-links">
-        <li class = "nav-menu-link">Home - All Cards</li>
-        <li class ="nav-menu-link">Last Selected Card</li>
-        <li class ="nav-menu-link">About</li>
+      <h2 id="logo-name">Tarotific</h2>
+      <ul id="nav-menu-links">
+        <li class="nav-menu-link">Home - All Cards</li>
+        <li class="nav-menu-link">Random Card</li>
+        <li class="nav-menu-link">About</li>
       </ul>
       <form>
         <label for="card-search">Search</label>
@@ -30,14 +31,13 @@
           type="search"
           id="card-search"
           name="query"
-          placeholder="Enter a tarot card name.."
+          placeholder="Enter a name, meaning, trait.."
         />
         <button id="submit">Submit</button>
       </form>
     </div>
-    <div id="card-library">
-        
-
+    <div id="card-gallery">
+      <div class="tarot-card"></div>
     </div>
   </body>
 </html>
