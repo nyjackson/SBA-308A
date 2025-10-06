@@ -15,7 +15,7 @@ This assessment measures my capability to implement advanced JavaScript tools an
 
 ## Installation/Access: ##
 1. Clone GitHub Repo
-2. Open index.html in browser or open via Live Server
+2. Open index.html in the browser or open via Live Server
 
 ## Resource Links: ##
 - [Tarot API](https://tarotapi.dev/)
@@ -42,9 +42,9 @@ This JS file contains async/await and fetch Promise interaction using the Tarot 
 ### uiHelpers.js ###
 Contains html element creation functions. 
 
-- createTarotCard: creates a the tarot card to display
+- createTarotCard: creates a tarot card to display
 - uploadCard: adds the card to the gallery
 - clearCards: clears all cards from the gallery
-- getImage: creates the cards corresponding image located in "./images"
+- getImage: creates the cards' corresponding image located in "./images"
 - getTarotInfo: creates the corresponding tarot card's information
 - craftAbout: creates the about section
